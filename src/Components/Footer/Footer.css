@@ -1,0 +1,33 @@
+footer {
+  background-color: #1b1b1f;
+
+  color: #f8f9fa;
+}
+
+footer h5, footer h6 {
+  color: #ff2e63;
+}
+
+footer a {
+  color: #f8f9fa;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff2e63;
+  text-decoration: none;
+}
+
+footer .bi {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .bi:hover {
+  transform: scale(1.2);
+  color: #ff2e63;
+}
+/* Footer.css */
+.footer-dark {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}

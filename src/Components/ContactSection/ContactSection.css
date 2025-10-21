@@ -1,0 +1,116 @@
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: rgba(14, 12, 12, 0.5);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-header {
+  margin-bottom: 2rem;
+}
+
+.contact-header h2 {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: #f2f6f4;
+  margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+  color: #f2f6f4;
+  font-size: 1.1rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #363434;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.9rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  color: #1e293b;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #641111;
+  box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.2);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  background-color: #641111;
+  color: white;
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #641111;
+  transform: scale(1.03);
+}
+
+.contact-social {
+  margin-top: 3rem;
+}
+
+.contact-social h3 {
+  color: #641111;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.social-iconsContact {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 2rem;
+}
+
+.social-iconsContact a {
+  color: #641111;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-iconsContact a:hover {
+  color: #641111;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-header h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .social-iconsContact {
+    font-size: 1.8rem;
+    gap: 1.2rem;
+  }
+}

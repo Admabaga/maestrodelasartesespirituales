@@ -1,0 +1,41 @@
+.nav-item-animated {
+  position: relative;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-item-animated:hover {
+  color: #00bcd4 !important;
+  transform: scale(1.03);
+}
+
+.nav-item-animated::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background-color: #00bcd4;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-item-animated:hover::after {
+  transform: scaleX(1);
+}
+
+.btn-accent {
+  background-color: #00bcd4;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+  background-color: #0097a7;
+  transform: scale(1.05);
+  color: white;
+}
