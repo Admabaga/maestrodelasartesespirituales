@@ -3,6 +3,7 @@
     background-color: rgba(14, 12, 12, 0.5);
     font-family: 'Segoe UI', sans-serif;
     color: #1e3a8a;
+    min-height: 100vh;
 }
 
 .services-header {
@@ -11,14 +12,14 @@
 }
 
 .services-header h2 {
-      margin-top: 23px;
+    margin-top: 23px;
     font-size: 2.5rem;
-    color: #641111;
+    color: #fcfcfc;
 }
 
 .services-header p {
     font-size: 1.2rem;
-    color: #334155;
+    color: #787a7e;
 }
 
 .services-grid {
@@ -54,7 +55,7 @@
 }
 
 .service-card h3 {
-    color: #641111;
+    color: #855050;
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
@@ -71,7 +72,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(24, 24, 24, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,14 +104,14 @@
 .modal-content h3 {
     margin-top: 0;
     font-size: 1.7rem;
-    color: #641111;
+    color: #863333;
     margin-bottom: 1rem;
 }
 
 .modal-content ul {
     text-align: left;
     padding-left: 1.5rem;
-    color: #a6a7a9;
+    color: #bcbcbd;
     font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
@@ -146,7 +147,6 @@
     color: #660b0b;
 }
 
-/* ANIMACIÓN */
 @keyframes zoomIn {
     from {
         transform: scale(0.95);

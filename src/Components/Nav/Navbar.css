@@ -1,11 +1,22 @@
+
+
+.navbar {
+  background-color: #121212 !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+}
+
 .nav-item-animated {
   position: relative;
   font-weight: 500;
   transition: all 0.3s ease;
+  color: #ffffff !important;
 }
 
 .nav-item-animated:hover {
-  color: #00bcd4 !important;
+  color: #f30915d8 !important;
   transform: scale(1.03);
 }
 
@@ -16,7 +27,7 @@
   bottom: -4px;
   height: 2px;
   width: 100%;
-  background-color: #00bcd4;
+  background-color: #f30915;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -27,15 +38,31 @@
 }
 
 .btn-accent {
-  background-color: #00bcd4;
-  color: #fff;
+  background-color: #f30915d2 !important;
+  color: #fff !important;
   font-weight: 600;
   border: none;
   transition: all 0.3s ease;
 }
 
 .btn-accent:hover {
-  background-color: #0097a7;
+  background-color: #c0060fc4 !important;
   transform: scale(1.05);
-  color: white;
+}
+
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #121212;
+  }
+
+  .nav-item-animated {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.1rem;
+  }
+
+  .btn-accent {
+    width: 100%;
+  }
 }
