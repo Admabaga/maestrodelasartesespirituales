@@ -1,60 +1,86 @@
 .testimonios-section {
-    background: linear-gradient(135deg, #0d0d0d 0%, #1f1f1f 100%);
+    background: radial-gradient(circle at center, rgba(45, 0, 0, 0.8), rgba(10, 0, 0, 0.95));
     color: #fff;
     padding: 100px 20px;
     text-align: center;
     position: relative;
     min-height: 100vh;
+    overflow: hidden;
+    z-index: 1;
 }
 
+
+/* 🌹 Título */
 .testimonios-title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 60px;
-    color: #f2f3f3;
-    text-shadow: 0 0 10px rgba(212, 0, 0, 0.5);
+    color: #ff3b3b;
+    text-shadow: 0 0 20px rgba(255, 50, 50, 0.6);
+    letter-spacing: 1px;
+    animation: fadeInDown 1.2s ease;
 }
 
+/* 💫 Contenedor */
 .carousel-container {
     position: relative;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+    animation: fadeInUp 1.2s ease;
 }
 
+/* 🃏 Tarjeta */
 .testimonial-card {
-    background: rgba(255, 255, 255, 0.05);
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(212, 0, 0, 0.15);
+    background: rgba(50, 0, 0, 0.75);
+    border: 1px solid rgba(255, 60, 60, 0.3);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
     transition: all 0.4s ease;
-    cursor: pointer;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
 }
 
+.testimonial-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 35px rgba(255, 0, 0, 0.35);
+    border-color: rgba(255, 80, 80, 0.5);
+}
+
+/* 📸 Imagen */
 .testimonial-img {
     width: 100%;
     height: 500px;
     object-fit: cover;
-    border-bottom: 3px solid #d40000;
+    border-bottom: 3px solid #ff3b3b;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+    transition: transform 0.4s ease;
 }
 
+.testimonial-card:hover .testimonial-img {
+    transform: scale(1.03);
+}
+
+/* 📝 Contenido */
 .testimonial-content {
     padding: 25px 30px;
 }
 
 .testimonial-text {
     font-style: italic;
-    color: #ddd;
+    color: #e2e2e2;
     font-size: 1.1rem;
     margin-bottom: 15px;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
 }
 
 .testimonial-name {
-    color: #d40000a2;
+    color: #ff4c4c;
     font-weight: 600;
     font-size: 1.1rem;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
 }
 
-/* Indicadores */
+/* 🌕 Indicadores */
 .carousel-indicators {
     display: flex;
     justify-content: center;
@@ -66,7 +92,7 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    border: 2px solid #d40000a9;
+    border: 2px solid rgba(255, 0, 0, 0.6);
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -74,11 +100,38 @@
 
 .indicator.active,
 .indicator:hover {
-    background-color: #d40000b4;
+    background-color: #ff3b3b;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
     transform: scale(1.2);
 }
 
-/* Responsivo */
+/* ✨ Animaciones */
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 📱 Responsivo */
 @media (max-width: 768px) {
     .testimonial-img {
         height: 450px;
@@ -91,4 +144,16 @@
     .testimonial-text {
         font-size: 1rem;
     }
+}
+
+/* ✨ Animación al aparecer en pantalla */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }

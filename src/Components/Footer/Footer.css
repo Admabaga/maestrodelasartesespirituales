@@ -1,33 +1,98 @@
 footer {
-  background-color: #1b1b1f;
+  width: 100%;
+background: linear-gradient(135deg, #0d0d0d 0%, #400000 60%, #5c0000 100%);
 
   color: #f8f9fa;
+  padding: 3.5rem 2rem 2rem;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
 }
 
-footer h5, footer h6 {
+/* Contenedor principal */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Títulos */
+.footer-title {
   color: #ff2e63;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 
-footer a {
+/* Enlaces */
+.footer-links a {
   color: #f8f9fa;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #ff2e63;
+  display: block;
+  margin: 0.4rem 0;
   text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  font-size: 0.95rem;
 }
 
-footer .bi {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-footer .bi:hover {
-  transform: scale(1.2);
+.footer-links a:hover {
   color: #ff2e63;
+  transform: translateX(6px);
 }
-/* Footer.css */
-.footer-dark {
-  background-color: #1a1a1a;
-  color: #f1f1f1;
+
+/* Contacto */
+.footer-contact p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Redes sociales */
+.footer-social {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.4rem;
+  font-size: 1.6rem;
+}
+
+.footer-social a {
+  color: #f8f9fa;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ff2e63;
+  transform: scale(1.2);
+}
+
+/* Línea inferior */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  font-size: 0.9rem;
+  color: #b3b3b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-links a:hover {
+    transform: translateX(0);
+  }
 }

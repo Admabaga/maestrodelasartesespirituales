@@ -30,6 +30,24 @@ const Testimonios = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [paused, setPaused] = useState(false);
     const containerRef = useRef(null);
+    useEffect(() => {
+        const revealElements = document.querySelectorAll(".reveal");
+
+        const revealOnScroll = () => {
+            revealElements.forEach((el) => {
+                const elementTop = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add("active");
+                }
+            });
+        };
+
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+
+        return () => window.removeEventListener("scroll", revealOnScroll);
+    }, []);
 
     useEffect(() => {
         if (!paused) {
