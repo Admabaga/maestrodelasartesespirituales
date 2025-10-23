@@ -1,158 +1,184 @@
 .testimonios-section {
-    background: radial-gradient(circle at center, rgba(45, 0, 0, 0.8), rgba(10, 0, 0, 0.95));
-    color: #fff;
-    text-align: center;
-    position: relative;
-    min-height: 100svh;
-    z-index: 1;
+  background: radial-gradient(circle at center, rgba(45, 0, 0, 0.8), rgba(10, 0, 0, 0.95));
+  color: #fff;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 5rem 2rem;
 }
-
 
 /* 🌹 Título */
 .testimonios-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 60px;
-    color: #ff3b3b;
-    text-shadow: 0 0 20px rgba(255, 50, 50, 0.6);
-    letter-spacing: 1px;
-    animation: fadeInDown 1.2s ease;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #ff3b3b;
+  text-shadow: 0 0 20px rgba(255, 50, 50, 0.6);
+  letter-spacing: 1px;
+  animation: fadeInDown 1.2s ease;
 }
 
 /* 💫 Contenedor */
 .carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    animation: fadeInUp 1.2s ease;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInUp 1.2s ease;
 }
 
 /* 🃏 Tarjeta */
 .testimonial-card {
-    background: rgba(50, 0, 0, 0.75);
-    border: 1px solid rgba(255, 60, 60, 0.3);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
-    transition: all 0.4s ease;
-    overflow: hidden;
-    backdrop-filter: blur(6px);
+  background: rgba(50, 0, 0, 0.75);
+  border: 1px solid rgba(255, 60, 60, 0.3);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
 }
 
 .testimonial-card:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 0 35px rgba(255, 0, 0, 0.35);
-    border-color: rgba(255, 80, 80, 0.5);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.35);
+  border-color: rgba(255, 80, 80, 0.5);
 }
 
 /* 📸 Imagen */
 .testimonial-img {
-    width: 100%;
-    height: 500px;
-    object-fit: scale-down; 
-    object-position: center; 
-    border-bottom: 3px solid #ff3b3b;
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
-    transition: transform 0.4s ease;
+  width: 100%;
+  height: 480px;
+  object-fit: scale-down;
+  object-position: center;
+  border-bottom: 3px solid #ff3b3b;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+  transition: transform 0.4s ease;
 }
 
 .testimonial-card:hover .testimonial-img {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 /* 📝 Contenido */
 .testimonial-content {
-    padding: 25px 30px;
+  padding: 25px 30px;
 }
 
 .testimonial-text {
-    font-style: italic;
-    color: #e2e2e2;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    text-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
+  font-style: italic;
+  color: #e2e2e2;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
 }
 
 .testimonial-name {
-    color: #ff4c4c;
-    font-weight: 600;
-    font-size: 1.1rem;
-    text-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+  color: #ff4c4c;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
 }
 
 /* 🌕 Indicadores */
 .carousel-indicators {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
 }
 
 .indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 0, 0, 0.6);
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 0, 0, 0.6);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .indicator.active,
 .indicator:hover {
-    background-color: #ff3b3b;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
-    transform: scale(1.2);
+  background-color: #ff3b3b;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+  transform: scale(1.2);
 }
 
 /* ✨ Animaciones */
-
 @keyframes fadeInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInDown {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* 📱 Responsivo */
-@media (max-width: 768px) {
-    .testimonial-img {
-        height: 450px;
-    }
-
-    .testimonios-title {
-        font-size: 2rem;
-    }
-
-    .testimonial-text {
-        font-size: 1rem;
-    }
-}
-
-/* ✨ Animación al aparecer en pantalla */
-.reveal {
+  from {
+    transform: translateY(-20px);
     opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s ease;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ✨ Aparición suave */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
 }
 
 .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 📱 Responsivo */
+
+/* Celulares */
+@media (max-width: 600px) {
+  .testimonios-section {
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  .testimonios-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-img {
+    height: 380px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets y laptops pequeñas */
+@media (min-width: 768px) and (max-width: 1280px) {
+  .testimonios-section {
+    padding: 4rem 3rem;
+  }
+
+  .testimonial-img {
+    height: 420px;
+  }
+}
+
+/* Laptops grandes o pantallas 15"-17" */
+@media (min-width: 1281px) {
+  .testimonios-section {
+    padding: 5rem 6rem;
+  }
+
+  .testimonial-img {
+    height: 480px;
+  }
 }
