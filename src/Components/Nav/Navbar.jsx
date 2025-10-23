@@ -3,7 +3,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import './Navbar.css'; // Asegúrate de tener el CSS que te dejo abajo
+import './Navbar.css'; 
 
 const CustomNavbar = () => {
     const [expanded, setExpanded] = useState(false);

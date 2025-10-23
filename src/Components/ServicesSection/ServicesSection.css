@@ -3,11 +3,10 @@
     background: radial-gradient(circle at center, rgba(45, 0, 0, 0.8), rgba(14, 0, 0, 0.9));
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    min-height: 100vh;
+    min-height: 100svh;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     z-index: 1;
-
 }
 
 /* ✨ Encabezado */
