@@ -1,28 +1,28 @@
 /* 🌟 Sección de Servicios */
 .services-section {
   width: 100%;
-  min-height: 100vh;
-  background: radial-gradient(circle at center, rgba(45, 0, 0, 0.85), rgba(14, 0, 0, 0.95));
+  background: radial-gradient(circle at center, rgba(45, 0, 0, 0.8), rgba(14, 0, 0, 0.9));
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  padding: 6rem 2rem 6rem; /* espacio superior e inferior equilibrado */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  padding: 6rem 2rem; /* espacio superior e inferior */
   position: relative;
-  overflow: hidden; /* 👈 sin scroll interno */
+  overflow: visible; /* ✅ deja fluir el contenido natural */
   z-index: 1;
+  margin: 0 auto;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  border: none;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem; /* separación entre header y grid */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* transición suave entre secciones */
 }
 
 /* ✨ Encabezado */
 .services-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   animation: fadeInDown 1.2s ease;
 }
 
@@ -110,6 +110,7 @@
   z-index: 999;
   padding: 1rem;
   animation: fadeIn 0.3s ease;
+  overflow-y: auto; /* ✅ permite scroll si el modal es más alto que la pantalla */
 }
 
 .modal-content {
@@ -124,42 +125,116 @@
   animation: zoomIn 0.3s ease-out;
   text-align: center;
   border: 1px solid rgba(255, 0, 0, 0.3);
-  max-height: 90vh;
-  overflow-y: auto; /* 👈 solo el modal tiene scroll si el contenido se pasa */
+  max-height: 90vh; /* ✅ evita que se salga del viewport */
+  overflow-y: auto; /* ✅ habilita scroll dentro del modal si hay mucho contenido */
 }
 
+/* Imagen del modal */
 .modal-icon {
   width: 100%;
   height: auto;
-  max-height: 250px;
+  max-height: 250px; /* ✅ limita tamaño para pantallas pequeñas */
   object-fit: cover;
   border-radius: 0.75rem;
   margin-bottom: 1rem;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
 }
 
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 1.7rem;
+  color: #ff3333;
+  margin-bottom: 1rem;
+}
+
+.modal-content ul {
+  text-align: left;
+  padding-left: 1.5rem;
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.close-btn {
+  background-color: #991111;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+  background-color: #c81e1e;
+  transform: scale(1.05);
+}
+
+.close-btn.top-right {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  color: #ff4c4c;
+  border: none;
+  font-weight: bold;
+  padding: 0;
+}
+
+.close-btn.top-right:hover {
+  color: #ff6666;
+}
+
 /* ✨ Animaciones */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 @keyframes fadeInDown {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-@keyframes zoomIn {
-  from { transform: scale(0.95); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* 📱 Responsive */
 @media (max-width: 1024px) {
   .services-section {
-    padding: 5rem 1.5rem 5rem;
+    padding: 5rem 1.5rem;
   }
-
   .modal-content {
     max-width: 90%;
     max-height: 85vh;
@@ -170,29 +245,30 @@
   .services-header h2 {
     font-size: 2rem;
   }
-
   .services-grid {
     gap: 1.5rem;
   }
-
   .service-card {
     padding: 1.5rem 1rem;
   }
-
   .modal-content {
     padding: 1.5rem 1rem;
   }
-
+  .modal-content h3 {
+    font-size: 1.5rem;
+  }
   .modal-icon {
     max-height: 200px;
+  }
+  .services-section {
+    padding: 4rem 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
   .services-section {
-    padding: 4rem 1rem 4rem;
+    padding: 3.5rem 1rem;
   }
-
   .modal-content {
     max-width: 95%;
     max-height: 80vh;
