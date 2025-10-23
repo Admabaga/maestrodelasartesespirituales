@@ -8,14 +8,14 @@ const testimoniosData = [
         nombre: "María López",
         texto:
             "Los amarres de amor realmente cambiaron mi vida. Nunca imaginé volver a sentir esa conexión tan fuerte.",
-        imagen: "/istockphoto-1005073438-1024x1024.jpg",
+        imagen: "/Imagen de WhatsApp 2025-10-22 a las 17.25.05_2b1929ee.jpg",
     },
     {
         id: 2,
         nombre: "Carlos Ramírez",
         texto:
             "Increíble experiencia, profesionalismo y resultados reales. Me siento agradecido por todo el proceso.",
-        imagen: "/istockphoto-1005073438-1024x1024.jpg",
+        imagen: "/Imagen de WhatsApp 2025-10-22 a las 17.25.05_2b1929ee.jpg",
     },
     {
         id: 3,

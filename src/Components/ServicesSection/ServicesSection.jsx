@@ -6,7 +6,8 @@ const services = [
         title: "Amarres y Unión de Pareja",
         description:
             "¿Tu pareja se ha alejado? A través de un amarre de amor poderoso puedo ayudarte a reavivar la pasión, unir corazones y atraer nuevamente el cariño sincero que te pertenece. Rituales auténticos y energía pura para restaurar el amor verdadero.",
-        icon: "/Images/Alojamientos.png",
+        firstIcon: "/Imagen de WhatsApp 2025-10-22 a las 16.50.53_6709c411.jpg",
+        secondIcon: "/Imagen de WhatsApp 2025-10-22 a las 16.50.53_b98be43f.jpg",
         details: (
             <ul>
                 <li><strong>Amarre de deseo:</strong> Reaviva la pasión y el fuego interior en tu relación.</li>
@@ -20,7 +21,8 @@ const services = [
         title: "Lecturas de Tarot y Oráculos",
         description:
             "Descubre lo que el universo tiene preparado para ti. A través de las cartas del Tarot, los oráculos y la intuición espiritual, recibirás guía sobre amor, dinero, salud y destino. Cada lectura es una ventana a tu camino interior.",
-        icon: "/Images/Tarot.png",
+        firstIcon: "/Imagen de WhatsApp 2025-10-22 a las 16.59.16_5f7db3ac.jpg",
+        secondIcon: "/Imagen de WhatsApp 2025-10-22 a las 16.59.16_18df7a4e.jpg",
         details: (
             <ul>
                 <li><strong>Tarot del amor:</strong> Resuelve dudas sobre tu pareja, expareja o futuro sentimental.</li>
@@ -34,7 +36,8 @@ const services = [
         title: "Limpiezas Energéticas y Protección",
         description:
             "Libérate de energías negativas, envidias, mal de ojo y bloqueos emocionales. Recupera tu equilibrio interior con limpiezas profundas que purifican tu entorno y restauran tu bienestar espiritual.",
-        icon: "/Images/Limpieza.png",
+        firstIcon: "/Imagen de WhatsApp 2025-10-22 a las 16.59.17_93c92100.jpg",
+        secondIcon: "/Imagen de WhatsApp 2025-10-22 a las 16.59.17_93c92100.jpg",
         details: (
             <ul>
                 <li><strong>Limpieza con hierbas y fuego:</strong> Elimina vibraciones densas y restaura tu vitalidad.</li>
@@ -48,7 +51,8 @@ const services = [
         title: "Rituales de Prosperidad y Abundancia",
         description:
             "Atrae la buena suerte, la estabilidad económica y las oportunidades con rituales sagrados de prosperidad. Libérate de bloqueos financieros y abre el camino a la abundancia universal.",
-        icon: "/Images/Prosperidad.png",
+        firstIcon: "/Imagen de WhatsApp 2025-10-22 a las 16.59.18_8919eb12.jpg",
+        secondIcon: "/Imagen de WhatsApp 2025-10-22 a las 16.59.18_a801cd4d.jpg",
         details: (
             <ul>
                 <li><strong>Ritual del dinero imantado:</strong> Activa la energía de atracción económica.</li>
@@ -82,7 +86,7 @@ const ServicesSection = () => {
                         className="service-card"
                         onClick={() => setSelected(service)}
                     >
-                        <img src={service.icon} alt={service.title} className="service-icon" />
+                        <img src={service.firstIcon} alt={service.title} className="service-icon" />
                         <h3>{service.title}</h3>
                         <p>{service.description}</p>
                     </div>
@@ -93,7 +97,7 @@ const ServicesSection = () => {
                 <div className="modal-overlay" onClick={() => setSelected(null)}>
                     <div className="modal-content animated" onClick={(e) => e.stopPropagation()}>
                         <button className="close-btn top-right" onClick={() => setSelected(null)}>&times;</button>
-                        <img src={selected.icon} alt={selected.title} className="modal-icon" />
+                        <img src={selected.secondIcon} alt={selected.title} className="modal-icon" />
                         <h3>{selected.title}</h3>
                         {selected.details}
                     </div>

@@ -12,7 +12,16 @@ export default function Home() {
                 <div className="hero-overlay">
                     <div className="hero-content">
                         <h1>Maestro de las artes espirituales.</h1>
-                        <p>lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi distinctio ea ipsa in quod explicabo quae necessitatibus quos, architecto ullam earum libero commodi alias dolorem amet molestias omnis, impedit esse.</p>
+                        <p>
+                            Soy Jose gregorio, guía espiritual y practicante de las artes místicas.
+                            A través de rituales, amarres, limpias y lecturas, ayudo a las personas a equilibrar su energía,
+                            sanar vínculos y abrir caminos de amor, prosperidad y protección.
+                        </p>
+                        <p>
+                            Desde joven sentí la presencia de lo invisible. Aprendí los secretos del tarot,
+                            la magia blanca y los rituales ancestrales de protección.
+                            Hoy pongo mi conocimiento al servicio de quienes buscan respuestas y equilibrio espiritual.
+                        </p>
                         <a href="#services" className="hero-button">Descubre más</a>
                     </div>
                 </div>
