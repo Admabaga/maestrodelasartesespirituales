@@ -2,7 +2,6 @@
   background: radial-gradient(circle at center, rgba(45, 0, 0, 0.8), rgba(10, 0, 0, 0.95));
   color: #fff;
   text-align: center;
-  position: relative;
   box-sizing: border-box;
   scroll-behavior: smooth;
   padding: 5rem 2rem;
