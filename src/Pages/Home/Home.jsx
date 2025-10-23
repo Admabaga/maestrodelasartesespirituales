@@ -3,6 +3,7 @@ import Footer from "../../Components/Footer/Footer"
 import ContactSection from "../../Components/ContactSection/ContactSection"
 import ServicesSection from "../../Components/ServicesSection/ServicesSection"
 import Testimonios from "../../Components/Testimonios/Testimonios"
+import { FaWhatsapp} from 'react-icons/fa';
 import './Home.css'
 export default function Home() {
     return (
@@ -30,5 +31,15 @@ export default function Home() {
             <Testimonios />
             <ContactSection />
             <Footer></Footer>
+            <div className="whatsappIcon"></div>
+            <a
+                href="https://wa.me/573001234567" 
+                className="whatsapp-float"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contactar por WhatsApp"
+            >
+                <FaWhatsapp className="whatsapp-icon" />
+            </a>
         </>)
 }

@@ -30,18 +30,7 @@ export default function Footer() {
           <p>📞 +57 300 123 4567</p>
           <p>✉️ maestro@espiritual.com</p>
         </div>
-
-        {/* Columna 4 */}
-        <div>
-          <h4 className="footer-title">Sígueme</h4>
-          <div className="footer-social">
-            <a href="#"><FaFacebook /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaWhatsapp /></a>
-          </div>
-        </div>
       </div>
-
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Maestro Espiritual — Todos los derechos reservados.</p>
       </div>

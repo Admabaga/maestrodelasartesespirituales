@@ -80,12 +80,7 @@ const ContactSection = () => {
         <div className="social-iconsContact">
           <a href="https://wa.me/573218854756" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <FaWhatsapp />
-          </a>
-          <a href="https://www.instagram.com/raicesvivas.ecohotel" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <FaInstagram />
-          </a>
-          <a href="https://www.facebook.com/raicesvivasecohotel" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <FaFacebookF />
+       <p>Linea de whatsapp</p>
           </a>
         </div>
       </div>
