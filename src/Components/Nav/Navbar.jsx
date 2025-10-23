@@ -127,7 +127,7 @@ const CustomNavbar = () => {
                                         <motion.span variants={itemVariants}>Testimonios</motion.span>
                                     </Nav.Link>
 
-                                    <Nav.Link as="button" className="my-3">
+                                    <Nav.Link  className="my-3">
                                         <motion.button
                                             variants={itemVariants}
                                             className="btn btn-accent w-100"
@@ -165,7 +165,6 @@ const CustomNavbar = () => {
                                 </Nav.Link>
 
                                 <Nav.Link
-                                    as="button"
                                     onClick={() => scrollToSection('#contact')}
                                 >
                                     <button className="btn btn-accent btn-sm px-3 py-1 rounded-pill">
