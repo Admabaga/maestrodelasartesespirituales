@@ -96,7 +96,6 @@ const ServicesSection = () => {
             {selected && (
                 <div className="modal-overlay" onClick={() => setSelected(null)}>
                     <div className="modal-content animated" onClick={(e) => e.stopPropagation()}>
-                        <button className="close-btn top-right" onClick={() => setSelected(null)}>&times;</button>
                         <img src={selected.secondIcon} alt={selected.title} className="modal-icon" />
                         <h3>{selected.title}</h3>
                         {selected.details}
