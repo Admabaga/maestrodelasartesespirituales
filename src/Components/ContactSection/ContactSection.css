@@ -1,52 +1,151 @@
-/* === Contact Section (versión mejorada para todas las pantallas) === */
 .contact-section {
   padding: 4rem 2rem;
   background: radial-gradient(circle at center, rgba(45, 0, 0, 0.85), rgba(10, 0, 0, 0.95));
   text-align: center;
   font-family: 'Poppins', sans-serif;
   color: #fff;
-
-  /* 📏 Altura dinámica adaptable a cualquier pantalla */
   min-height: 100vh;
   min-height: 100svh;
-
-  /* 🧱 Estructura */
   position: relative;
-  overflow-y: auto; /* permite desplazamiento si hay más contenido */
+  overflow-y: auto;
   overflow-x: hidden;
   z-index: 1;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-/* === Ajustes para pantallas medianas (tablets y laptops pequeñas) === */
-@media (min-width: 768px) and (max-width: 1280px) {
-  .contact-section {
-    padding-top: 3.5rem;
-    padding-bottom: 6rem; /* evita que el final se corte */
-    min-height: calc(100svh - 60px); /* resta barras de sistema */
-  }
-
-  .contact-form {
-    max-height: calc(100svh - 260px);
-    overflow-y: auto; /* por si el formulario ocupa demasiado */
-  }
+/* 🕯️ Encabezado */
+.contact-header {
+  margin-bottom: 2.5rem;
+  animation: fadeInDown 1.2s ease;
 }
 
-/* === Ajustes para laptops más grandes o pantallas con zoom === */
-@media (min-width: 1281px) and (max-width: 1600px) {
-  .contact-section {
-    padding-bottom: 5rem;
-    min-height: calc(100svh - 80px);
-  }
-
-  .contact-form {
-    max-height: calc(100svh - 240px);
-    overflow-y: auto;
-  }
+.contact-header h2 {
+  font-size: 2.7rem;
+  color: #ff3b3b;
+  text-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+  letter-spacing: 1px;
 }
 
-/* === Asegurar que en móviles siga funcionando igual === */
+.contact-header p {
+  color: #e2e2e2;
+  font-size: 1.15rem;
+  margin-top: 0.6rem;
+  opacity: 0.9;
+}
+
+/* 💌 Formulario */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(50, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);
+  border: 1px solid rgba(255, 50, 50, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  animation: fadeInUp 1.2s ease;
+  backdrop-filter: blur(6px);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 80, 80, 0.3);
+  background: rgba(15, 0, 0, 0.6);
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  color: #f5f5f5;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ff4c4c;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+  transform: scale(1.02);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* 🧿 Botón */
+.contact-form button {
+  background: linear-gradient(90deg, #8e0808, #b71717);
+  color: #fff;
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.25);
+}
+
+.contact-form button:hover {
+  background: linear-gradient(90deg, #b71717, #ff1c1c);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+}
+
+/* 🔥 Redes sociales */
+.contact-social {
+  margin-top: 3rem;
+  animation: fadeInUp 1.3s ease;
+}
+
+.contact-social h3 {
+  color: #ff3b3b;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+}
+
+.social-iconsContact {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2.2rem;
+}
+
+.social-iconsContact a {
+  color: #ff4c4c;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.3));
+}
+
+.social-iconsContact a:hover {
+  color: #fff;
+  transform: scale(1.25);
+  filter: drop-shadow(0 0 12px rgba(255, 0, 0, 0.7));
+}
+
+/* 🌙 Animaciones suaves */
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* === 📱 Ajustes Responsive === */
+
+/* Celulares */
 @media (max-width: 600px) {
   .contact-section {
     padding: 3rem 1.5rem 5rem;
@@ -64,5 +163,32 @@
   .social-iconsContact {
     font-size: 1.8rem;
     gap: 1.2rem;
+  }
+}
+
+/* Tablets y laptops pequeñas */
+@media (min-width: 768px) and (max-width: 1280px) {
+  .contact-section {
+    padding-top: 3.5rem;
+    padding-bottom: 6rem;
+    min-height: calc(100svh - 60px);
+  }
+
+  .contact-form {
+    max-height: calc(100svh - 260px);
+    overflow-y: auto;
+  }
+}
+
+/* Laptops grandes o pantallas 15"-17" */
+@media (min-width: 1281px) and (max-width: 1600px) {
+  .contact-section {
+    padding-bottom: 5rem;
+    min-height: calc(100svh - 80px);
+  }
+
+  .contact-form {
+    max-height: calc(100svh - 240px);
+    overflow-y: auto;
   }
 }
