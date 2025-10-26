@@ -30,8 +30,7 @@ const ContactSection = () => {
     const texto = `🌿 *Hola Maestro!* 🙏\n\nTe escribe *${nombre}* y desea comunicarse contigo.\n\n🪶 *Motivo de consulta:* ${email}\n💬 *Mensaje:* ${mensaje}`;
     const encodedText = encodeURIComponent(texto);
 
-    const url = `https://wa.me/${phoneNumber}?text=${encodedText}`;
-
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedText}`;
 
     window.open(url, '_blank');
 

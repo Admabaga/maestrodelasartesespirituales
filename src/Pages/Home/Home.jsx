@@ -33,7 +33,7 @@ export default function Home() {
             <Footer></Footer>
             <div className="whatsappIcon"></div>
             <a
-                href="https://wa.me/573001234567" 
+                href="https://wa.me/16018781857" 
                 className="whatsapp-float"
                 target="_blank"
                 rel="noopener noreferrer"
