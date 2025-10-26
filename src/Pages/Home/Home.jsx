@@ -5,6 +5,7 @@ import ServicesSection from "../../Components/ServicesSection/ServicesSection"
 import Testimonios from "../../Components/Testimonios/Testimonios"
 import { FaWhatsapp} from 'react-icons/fa';
 import './Home.css'
+import GalerySection from "../../Components/GalerySection/GalerySection"
 export default function Home() {
     return (
         <>
@@ -23,10 +24,11 @@ export default function Home() {
                             la magia blanca y los rituales ancestrales de protección.
                             Hoy pongo mi conocimiento al servicio de quienes buscan respuestas y equilibrio espiritual.
                         </p>
-                        <a href="#services" className="hero-button">Descubre más</a>
+                        <a href="#galeria" className="hero-button">Descubre más</a>
                     </div>
                 </div>
             </section>
+            <GalerySection />
             <ServicesSection />
             <Testimonios />
             <ContactSection />
