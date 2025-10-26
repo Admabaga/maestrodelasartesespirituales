@@ -1,4 +1,3 @@
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import "./Footer.css";
 
 export default function Footer() {
@@ -26,9 +25,8 @@ export default function Footer() {
         {/* Columna 3 */}
         <div className="footer-contact">
           <h4 className="footer-title">Contacto</h4>
-          <p>📍 Medellín, Colombia</p>
-          <p>📞 +57 300 123 4567</p>
-          <p>✉️ maestro@espiritual.com</p>
+          <p>📞 +1 601 878 18 57</p>
+          <p>✉️ maestrodelasartesespirituasles@gmail.com</p>
         </div>
       </div>
       <div className="footer-bottom">

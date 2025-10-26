@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ContactSection.css';
-import { FaWhatsapp, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { FaWhatsapp} from 'react-icons/fa';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const ContactSection = () => {
       return;
     }
 
-    const phoneNumber = '573205909106'; 
+    const phoneNumber = '16018781857'; 
     const texto = `🌿 *Hola Maestro!* 🙏\n\nTe escribe *${nombre}* y desea comunicarse contigo.\n\n🪶 *Motivo de consulta:* ${email}\n💬 *Mensaje:* ${mensaje}`;
     const encodedText = encodeURIComponent(texto);
 
@@ -78,7 +78,7 @@ const ContactSection = () => {
       <div className="contact-social">
         <h3>También puedes contactarnos por:</h3>
         <div className="social-iconsContact">
-          <a href="https://wa.me/573218854756" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <a href="https://wa.me/16018781857" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <FaWhatsapp />
        <p>Linea de whatsapp</p>
           </a>
